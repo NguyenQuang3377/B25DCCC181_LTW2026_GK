@@ -3,6 +3,14 @@ import TaskRow from './TaskRow.js'
 function TaskTable({ tasks, onToggle, onDelete }) {
   return (
     <table>
+      <colgroup>
+        <col className="task-column" />
+        <col className="assignee-column" />
+        <col className="priority-column" />
+        <col className="hours-column" />
+        <col className="status-column" />
+        <col className="actions-column" />
+      </colgroup>
       <thead>
         <tr>
           <th>Công việc</th>
