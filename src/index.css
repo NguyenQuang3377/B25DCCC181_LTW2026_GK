@@ -1,0 +1,83 @@
+body {
+  margin: 20px;
+  color: #111;
+  background: #fff;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  margin-bottom: 32px;
+}
+
+nav a {
+  color: #111;
+}
+
+nav a.active {
+  color: red;
+  font-weight: bold;
+}
+
+h1,
+h2 {
+  color: red;
+}
+
+main {
+  max-width: 900px;
+}
+
+ul {
+  line-height: 1.6;
+}
+
+.filters,
+.task-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.filters label,
+.task-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.task-form {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.task-form input,
+.task-form select,
+.filters input,
+.filters select {
+  min-width: 170px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 6px 10px;
+  border: 1px solid #aaa;
+  text-align: left;
+}
+
+.task-done {
+  color: green;
+}
+
+.actions {
+  white-space: nowrap;
+}
+
+.actions button + button {
+  margin-left: 4px;
+}
