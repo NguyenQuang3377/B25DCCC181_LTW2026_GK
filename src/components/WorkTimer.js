@@ -20,7 +20,7 @@ class WorkTimer extends Component {
   }
 
   render() {
-    return <p>Thời gian xem: {this.state.seconds} giây</p>
+    return <p>Đã xem: {this.state.seconds} giây</p>
   }
 }
 

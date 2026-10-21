@@ -43,7 +43,7 @@ function TaskDetail({ tasks, loading, error }) {
       <p>
         <strong>Trạng thái:</strong> {task.done ? 'Đã xong' : 'Đang làm'}
       </p>
-      <WorkTimer />
+      <WorkTimer key={task.id} />
       <button type="button" onClick={() => navigate(-1)}>
         Quay lại
       </button>

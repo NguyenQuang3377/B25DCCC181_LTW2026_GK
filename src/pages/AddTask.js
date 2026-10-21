@@ -18,12 +18,18 @@ function AddTask({ onAdd }) {
       return
     }
 
+    const numericHours = Number(hours)
+    if (!Number.isInteger(numericHours) || numericHours < 1 || numericHours > 40) {
+      setError('Số giờ phải từ 1 đến 40')
+      return
+    }
+
     onAdd({
       id: Date.now(),
       title: title.trim(),
       assignee: assignee.trim(),
       priority,
-      hours: Number(hours),
+      hours: numericHours,
       done: false,
     })
     navigate('/tasks', { replace: true })
@@ -32,7 +38,7 @@ function AddTask({ onAdd }) {
   return (
     <section>
       <h1>Thêm công việc mới</h1>
-      <form className="task-form" onSubmit={handleSubmit}>
+      <form className="task-form" onSubmit={handleSubmit} noValidate>
         <label htmlFor="task-title">
           Tên công việc
           <input
@@ -69,6 +75,8 @@ function AddTask({ onAdd }) {
             id="task-hours"
             type="number"
             min="1"
+            max="40"
+            step="1"
             value={hours}
             onChange={(event) => setHours(event.target.value)}
           />

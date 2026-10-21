@@ -3,7 +3,10 @@ function Home({ tasks, loading, error }) {
     (count, task) => count + Number(task.done),
     0,
   )
-  const totalHours = tasks.reduce((total, task) => total + task.hours, 0)
+  const remainingHours = tasks.reduce(
+    (total, task) => total + (task.done ? 0 : task.hours),
+    0,
+  )
 
   return (
     <section>
@@ -16,8 +19,8 @@ function Home({ tasks, loading, error }) {
       ) : (
         <ul>
           <li>Tổng số công việc: {tasks.length}</li>
-          <li>Đã xong: {completedCount}</li>
-          <li>Tổng số giờ ước tính: {totalHours}</li>
+          <li>Số công việc đã xong: {completedCount}</li>
+          <li>Tổng số giờ còn lại: {remainingHours}</li>
         </ul>
       )}
     </section>

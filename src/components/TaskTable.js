@@ -24,7 +24,7 @@ function TaskTable({ tasks, onToggle, onDelete }) {
       <tbody>
         {tasks.length === 0 ? (
           <tr>
-            <td colSpan="6">Không có công việc phù hợp.</td>
+            <td colSpan="6">Không có dữ liệu.</td>
           </tr>
         ) : (
           tasks.map((task) => (

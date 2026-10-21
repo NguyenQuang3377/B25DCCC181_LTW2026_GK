@@ -29,6 +29,7 @@ function TaskList({ tasks, loading, error, onToggle, onDelete }) {
             onSearchChange={setSearch}
             onPriorityChange={setPriority}
           />
+          <p>Số công việc tìm thấy: {filteredTasks.length}</p>
           <TaskTable
             tasks={filteredTasks}
             onToggle={onToggle}
