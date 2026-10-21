@@ -1,10 +1,6 @@
 import TaskRow from './TaskRow.js'
 
 function TaskTable({ tasks, onToggle, onDelete }) {
-  if (tasks.length === 0) {
-    return <p>Không có công việc phù hợp.</p>
-  }
-
   return (
     <table>
       <thead>
@@ -18,14 +14,20 @@ function TaskTable({ tasks, onToggle, onDelete }) {
         </tr>
       </thead>
       <tbody>
-        {tasks.map((task) => (
-          <TaskRow
-            key={task.id}
-            task={task}
-            onToggle={onToggle}
-            onDelete={onDelete}
-          />
-        ))}
+        {tasks.length === 0 ? (
+          <tr>
+            <td colSpan="6">Không có công việc phù hợp.</td>
+          </tr>
+        ) : (
+          tasks.map((task) => (
+            <TaskRow
+              key={task.id}
+              task={task}
+              onToggle={onToggle}
+              onDelete={onDelete}
+            />
+          ))
+        )}
       </tbody>
     </table>
   )

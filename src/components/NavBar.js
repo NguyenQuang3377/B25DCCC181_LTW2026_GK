@@ -7,9 +7,13 @@ function NavBar() {
         Trang chủ
       </NavLink>
       {' | '}
-      <NavLink to="/tasks">Danh sách</NavLink>
+      <NavLink to="/tasks" end>
+        Danh sách
+      </NavLink>
       {' | '}
-      <NavLink to="/tasks/new">Thêm mới</NavLink>
+      <NavLink to="/tasks/new" end>
+        Thêm mới
+      </NavLink>
     </nav>
   )
 }

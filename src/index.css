@@ -74,6 +74,14 @@ td {
   color: green;
 }
 
+.task-done a {
+  text-decoration: line-through;
+}
+
+tbody tr:hover td {
+  background: #f3f3f3;
+}
+
 .actions {
   white-space: nowrap;
 }

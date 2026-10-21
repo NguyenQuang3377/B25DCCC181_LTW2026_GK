@@ -33,23 +33,26 @@ function AddTask({ onAdd }) {
     <section>
       <h1>Thêm công việc mới</h1>
       <form className="task-form" onSubmit={handleSubmit}>
-        <label>
+        <label htmlFor="task-title">
           Tên công việc
           <input
+            id="task-title"
             value={title}
             onChange={(event) => setTitle(event.target.value)}
           />
         </label>
-        <label>
+        <label htmlFor="task-assignee">
           Người làm
           <input
+            id="task-assignee"
             value={assignee}
             onChange={(event) => setAssignee(event.target.value)}
           />
         </label>
-        <label>
+        <label htmlFor="task-priority">
           Mức ưu tiên
           <select
+            id="task-priority"
             value={priority}
             onChange={(event) => setPriority(event.target.value)}
           >
@@ -60,9 +63,10 @@ function AddTask({ onAdd }) {
             ))}
           </select>
         </label>
-        <label>
+        <label htmlFor="task-hours">
           Số giờ ước tính
           <input
+            id="task-hours"
             type="number"
             min="1"
             value={hours}

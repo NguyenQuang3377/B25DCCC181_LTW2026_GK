@@ -3,18 +3,20 @@ import { PRIORITIES } from '../data.js'
 function FilterBar({ search, priority, onSearchChange, onPriorityChange }) {
   return (
     <div className="filters">
-      <label>
+      <label htmlFor="task-search">
         Tìm kiếm
         <input
+          id="task-search"
           type="search"
           value={search}
           onChange={(event) => onSearchChange(event.target.value)}
           placeholder="Tên công việc"
         />
       </label>
-      <label>
+      <label htmlFor="task-priority">
         Mức ưu tiên
         <select
+          id="task-priority"
           value={priority}
           onChange={(event) => onPriorityChange(event.target.value)}
         >

@@ -1,1 +1,1 @@
-export const PRIORITIES = ['Cao', 'Trung bình', 'Thấp']
+export const PRIORITIES = ['Cao', 'Trung bình', 'Thấp'];

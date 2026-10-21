@@ -1,4 +1,5 @@
 import { useNavigate, useParams } from 'react-router-dom'
+import WorkTimer from '../components/WorkTimer.js'
 
 function TaskDetail({ tasks, loading, error }) {
   const { id } = useParams()
@@ -42,6 +43,7 @@ function TaskDetail({ tasks, loading, error }) {
       <p>
         <strong>Trạng thái:</strong> {task.done ? 'Đã xong' : 'Đang làm'}
       </p>
+      <WorkTimer />
       <button type="button" onClick={() => navigate(-1)}>
         Quay lại
       </button>
